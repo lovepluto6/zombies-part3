@@ -7,6 +7,7 @@ public class ZombieController : MonoBehaviour
 {
     public GameObject target;
     public float damageAmount = 5;
+    public float BigdamageAmount = 5;
     Animator anim;
     NavMeshAgent agent;
     
@@ -48,6 +49,10 @@ public class ZombieController : MonoBehaviour
     public void DamagePlayer()
     {
         target.GetComponent<FPController>().TakeHit(damageAmount);
+    }
+    public void BigDamagePlayer()
+    {
+        target.GetComponent<FPController>().TakeHit(BigdamageAmount);
     }
     // Update is called once per frame
     void Update()
